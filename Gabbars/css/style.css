@@ -1,0 +1,86 @@
+body {
+    font-family: Open Sans, sans-serif;
+    color: coral;
+}
+h1 {
+    font-weight: 300;
+    font-size: 3em;
+}
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+a:hover {
+    text-decoration: none;
+    color: tomato;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.cerita {
+    text-align: center;
+    padding-top: 40px;
+}
+.karya {
+    margin:0px auto;
+    text-align:left;
+    padding:0px;
+}
+.test {
+    padding-top: 0px;
+}
+.menu {
+    position: fixed;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 25px;
+    opacity: 0.5;
+}
+.menu:hover {
+    opacity:1;
+}
+.menu::after {
+    content: attr(data-dia);
+    padding-left: 50px;
+    
+}
+.menu span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+.menu span:before, .menu span:after {
+    position: absolute;
+    content:'';
+}
+.menu span, .menu span:before, .menu span:after {
+    width: 40px;
+    height: 4px;
+   
+    display: block;
+}
+.menu span:before {
+    margin-top: -12px;
+}
+.menu span:after {
+    margin-top: 0px;
+}
+.pusing span {
+    -webkit-transition: .2s ease 0;
+}
+.pusing span:before, .pusing span:after {
+    -webkit-transition-property: margin, opacity;
+    -webkit-transition-duration: .2s, 0;
+    -webkit-transition-delay: .2s;
+}
+.pusing:hover span {
+    -webkit-transform: rotate(90deg);
+    -webkit-transition-delay: .2s;
+}
+.pusing:hover span:before, .pusing:hover span:after {
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-transition-delay: 0, .2s;
+}
